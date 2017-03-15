@@ -1,3 +1,6 @@
+plugins {
+  id "org.sonarqube" version "2.2"
+}
 apply plugin: 'java'
 apply plugin: 'application'
 mainClassName = "Chess"
@@ -9,9 +12,6 @@ repositories {
 			password mavenPassword
 		}
 	}
-}
-plugins {
-  id "org.sonarqube" version "2.2"
 }
 dependencies {
 	testCompile 'junit:junit:4.12'
@@ -36,6 +36,7 @@ test {
 }
 task printProps {
     doLast {
+    	println System.getProperty("sonar.host.url")
         println mavenCentral
         println mavenRelease
         println mavenSnapshot
