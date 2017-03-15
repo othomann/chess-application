@@ -6,7 +6,7 @@ repositories {
 		url mavenCentral
 		credentials {
 			username mavenUsername
-			password mavenUsername
+			password mavenPassword
 		}
 	}
 }
