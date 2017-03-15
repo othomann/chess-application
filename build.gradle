@@ -23,7 +23,7 @@ run {
 	standardInput = System.in //added for running testDriver.java
  }
 }
-test {
+/*test {
     testLogging {
         // Make sure output from
         // standard out or error is shown
@@ -31,7 +31,7 @@ test {
         showStandardStreams = true
     }
 }
-
+*/
 task printProps {
     doLast {
         println mavenCentral
