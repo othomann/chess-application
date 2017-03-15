@@ -1,8 +1,14 @@
 apply plugin: 'java'
 apply plugin: 'application'
-mainClassName = "Chess" 
+mainClassName = "Chess"
 repositories {
-	mavenCentral()
+	maven {
+		url mavenCentral
+		credentials {
+			username mavenUsername
+			password mavenUsername
+		}
+	}
 }
 dependencies {
 	testCompile 'junit:junit:4.12'
@@ -23,5 +29,15 @@ test {
         // standard out or error is shown
         // in Gradle output.
         showStandardStreams = true
+    }
+}
+
+task printProps {
+    doLast {
+        println mavenCentral
+        println mavenRelease
+        println mavenSnapshot
+        println mavenUsername
+        println mavenUsername
     }
 }

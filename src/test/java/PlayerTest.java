@@ -44,7 +44,7 @@ public class PlayerTest{
 	}
 	
 	//king in check after enemy move
-	@Test
+	//@Test
 	public void isInCheckTest2(){
 		game = new Game();
 		game.setup();
