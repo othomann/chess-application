@@ -38,6 +38,6 @@ task printProps {
         println mavenRelease
         println mavenSnapshot
         println mavenUsername
-        println mavenUsername
+        println mavenPassword
     }
 }
